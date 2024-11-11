@@ -10,55 +10,32 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
-}
-
-/* Encabezado */
-header {
-    background: linear-gradient(135deg, #d22b2b, #4e4e4e);
-    color: white;
-    padding: 30px;
-    text-align: center;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-header h1 {
-    font-size: 3rem;
-}
-
-header p {
-    font-size: 1.2rem;
+    height: 100vh;
+    margin: 0;
 }
 
 /* Contenedor principal */
 main {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 600px;
-    margin-top: 40px;
+    max-width: 400px;
 }
 
 /* Secciones de formularios */
 .form-section {
-    background-color: #fff;
-    padding: 20px;
     margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.form-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #333;
-}
-
+/* Inputs y botones */
 input[type="text"], input[type="number"] {
     width: 100%;
     padding: 12px;
-    margin: 10px 0;
+    margin: 8px 0;
     border-radius: 5px;
     border: 2px solid #ddd;
     font-size: 1rem;
@@ -76,9 +53,10 @@ button {
     border: none;
     background-color: #d22b2b;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: 8px;
 }
 
 button:hover {
@@ -97,20 +75,8 @@ button:hover {
 
 /* Sección de información adicional */
 .info-section {
-    background-color: #fff;
-    padding: 20px;
-    margin-top: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #333;
-}
-
-.info-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-}
-
-.info-section p {
+    margin-top: 20px;
+    text-align: center;
     font-size: 1rem;
     color: #666;
 }
