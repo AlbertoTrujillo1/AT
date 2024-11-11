@@ -74,4 +74,8 @@ function realizarApuesta() {
             document.getElementById("apuestaResultado").textContent = `Apuesta realizada: ${montoApuesta} BTC. Nuevo balance: ${usuarios[username].balance} BTC.`;
         }
     } else {
-        document.getElementById("apuestaResultado").textContent = "Usuario no
+        document.getElementById("apuestaResultado").textContent = "Usuario no encontrado.";
+    }
+
+    document.getElementById("montoApuesta").value = "";
+}
