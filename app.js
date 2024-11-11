@@ -20,11 +20,11 @@ function registrarUsuario() {
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || {};
 
     if (usuarios[username]) {
-        alert("El usuario ya existe.");
+        document.getElementById("registrationResult").textContent = "El usuario ya existe.";
     } else {
         usuarios[username] = { balance: BALANCE_INICIAL };
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
-        alert(`Usuario "${username}" registrado con un balance de ${BALANCE_INICIAL} BTC.`);
+        document.getElementById("registrationResult").textContent = `Usuario "${username}" registrado con un balance de ${BALANCE_INICIAL} BTC.`;
     }
 
     document.getElementById("username").value = "";
