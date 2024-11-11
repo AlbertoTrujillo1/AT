@@ -140,3 +140,131 @@ button:hover {
         opacity: 1;
     }
 }
+
+/* Media Queries para Responsividad */
+
+/* Pantallas pequeñas (dispositivos móviles) */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .navbar h1 {
+        font-size: 2rem; /* Reducir tamaño en móviles */
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .form-section {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    input[type="text"], input[type="number"], button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    #registrationResult, #resultado, #apuestaResultado, #transferResult {
+        font-size: 1rem;
+        padding: 8px;
+    }
+}
+
+/* Pantallas medianas (tablets) */
+@media (max-width: 900px) {
+    .container {
+        padding: 30px;
+        max-width: 80%;
+    }
+
+    .navbar h1 {
+        font-size: 2.2rem; /* Reducir tamaño en tablets */
+    }
+
+    .navbar ul {
+        flex-direction: row;
+    }
+
+    .navbar ul li {
+        margin: 0 20px;
+    }
+
+    .form-section {
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    input[type="text"], input[type="number"], button {
+        font-size: 1.1rem;
+        padding: 14px;
+    }
+
+    button {
+        font-size: 1.1rem;
+    }
+
+    #registrationResult, #resultado, #apuestaResultado, #transferResult {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+}
+
+/* Pantallas grandes (desktops) */
+@media (min-width: 901px) {
+    .container {
+        padding: 40px;
+        max-width: 800px;
+    }
+
+    .navbar h1 {
+        font-size: 2.5rem; /* Tamaño grande para escritorio */
+    }
+
+    .navbar ul {
+        flex-direction: row;
+    }
+
+    .navbar ul li {
+        margin: 0 25px;
+    }
+
+    .form-section {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"], input[type="number"], button {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 1.2rem;
+    }
+
+    #registrationResult, #resultado, #apuestaResultado, #transferResult {
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+}
