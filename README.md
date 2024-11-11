@@ -1,4 +1,4 @@
-# 🚀 **Crypto Racing Bet - Cryptocurrency Betting & Racing Simulation** 🌟
+# 🚀 **Muntrume Motorsport - Cryptocurrency Betting & Racing Simulation** 🌟
 
 Welcome to **Crypto Racing Bet**: an innovative platform where **betting** meets **cryptocurrency** and **motorsport**. Here, you can place bets using cryptocurrency and test your knowledge and skills through racing simulations. **The goal** is simple: predict race outcomes and bet your crypto to win more based on your predictions.
 
