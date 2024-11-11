@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("registerButton").addEventListener("click", registrarUsuario);
     document.getElementById("checkBalanceButton").addEventListener("click", consultarBalance);
     document.getElementById("placeBetButton").addEventListener("click", realizarApuesta);
+    document.getElementById("transferButton").addEventListener("click", transferirBTC);
 });
 
 // Función para registrar un nuevo usuario
@@ -39,21 +40,22 @@ function consultarBalance() {
         return;
     }
 
-    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || {};
-
-    if (usuarios[consultaUsuario]) {
-        const balance = usuarios[consultaUsuario].balance;
-        document.getElementById("resultado").textContent = `Balance de ${consultaUsuario}: ${balance} BTC`;
-    } else {
-        document.getElementById("resultado").textContent = "Usuario no encontrado.";
-    }
+    // Simula la consulta de balance
+    fetch('/balance')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("resultado").textContent = `Saldo de ${consultaUsuario}: ${data.balance} BTC`;
+        })
+        .catch(error => {
+            document.getElementById("resultado").textContent = "No se pudo obtener el saldo.";
+        });
 
     document.getElementById("consultaUsuario").value = "";
 }
 
 // Función para realizar una apuesta
 function realizarApuesta() {
-    const username = document.getElementById("consultaUsuario").value.trim();
+    const username = document.getElementById("betUsername").value.trim();
     const montoApuesta = parseFloat(document.getElementById("montoApuesta").value.trim());
 
     if (!username || isNaN(montoApuesta) || montoApuesta <= 0) {
@@ -61,21 +63,24 @@ function realizarApuesta() {
         return;
     }
 
-    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || {};
+    // Simula la realización de una apuesta
+    document.getElementById("apuestaResultado").textContent = `Apuesta realizada: ${montoApuesta} BTC.`;
+    document.getElementById("betUsername").value = "";
+    document.getElementById("montoApuesta").value = "";
+}
 
-    if (usuarios[username]) {
-        const balanceUsuario = usuarios[username].balance;
+// Función para transferir BTC
+function transferirBTC() {
+    const amount = parseFloat(document.getElementById("amountToTransfer").value.trim());
+    const address = document.getElementById("transferAddress").value.trim();
 
-        if (montoApuesta > balanceUsuario) {
-            alert("No tienes suficiente saldo para realizar esta apuesta.");
-        } else {
-            usuarios[username].balance -= montoApuesta;
-            localStorage.setItem("usuarios", JSON.stringify(usuarios));
-            document.getElementById("apuestaResultado").textContent = `Apuesta realizada: ${montoApuesta} BTC. Nuevo balance: ${usuarios[username].balance} BTC.`;
-        }
-    } else {
-        document.getElementById("apuestaResultado").textContent = "Usuario no encontrado.";
+    if (!amount || !address) {
+        alert("Por favor, ingresa una cantidad y una dirección válida.");
+        return;
     }
 
-    document.getElementById("montoApuesta").value = "";
+    // Simula la transferencia de BTC
+    document.getElementById("transferResult").textContent = `Transferencia de ${amount} BTC realizada a ${address}.`;
+    document.getElementById("amountToTransfer").value = "";
+    document.getElementById("transferAddress").value = "";
 }
