@@ -9,19 +9,20 @@
 <body>
     <header>
         <h1>Apuestas iRacing con Criptomonedas</h1>
+        <p>Regístrate y consulta tu saldo en BTC</p>
     </header>
     
     <main>
-        <section>
+        <section class="form-section">
             <h2>Registrar Nuevo Usuario</h2>
-            <input type="text" id="username" placeholder="Usuario">
-            <button onclick="registrarUsuario()">Registrar Usuario</button>
+            <input type="text" id="username" placeholder="Ingresa tu usuario">
+            <button id="registerButton">Registrar Usuario</button>
         </section>
         
-        <section>
+        <section class="form-section">
             <h2>Consultar Balance</h2>
             <input type="text" id="consultaUsuario" placeholder="Usuario">
-            <button onclick="consultarBalance()">Consultar Balance</button>
+            <button id="checkBalanceButton">Consultar Balance</button>
             <div id="resultado"></div>
         </section>
     </main>
