@@ -1,19 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apuestas iRacing con Criptos</title>
+    <title>Apuestas iRacing con Criptomonedas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Apuestas con iRacing y Criptomonedas</h1>
+    <header class="header">
+        <h1 class="title">Apuestas iRacing con Criptomonedas</h1>
+    </header>
     
-    <div>
-        <input type="text" id="username" placeholder="Usuario">
-        <button onclick="consultarBalance()">Consultar Balance</button>
-        <div id="resultado"></div>
-    </div>
+    <main class="container">
+        <section class="betting-section">
+            <h2>Realiza tu Apuesta</h2>
+            <input type="text" id="username" placeholder="Usuario" class="input">
+            <input type="number" id="betAmount" placeholder="Monto de la apuesta (BTC)" class="input">
+            <button onclick="consultarBalance()" class="btn">Consultar Balance</button>
+            <button onclick="realizarApuesta()" class="btn primary">Realizar Apuesta</button>
+            <div id="resultado" class="result"></div>
+        </section>
+    </main>
 
     <script src="app.js"></script>
 </body>
