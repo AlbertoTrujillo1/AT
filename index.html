@@ -3,45 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apuestas iRacing con Criptomonedas</title>
+    <title>Casino Cripto Apuestas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main>
-        <!-- Registro de Usuario -->
-        <section class="form-section">
-            <h2>Registrar Usuario</h2>
-            <input type="text" id="username" placeholder="Nombre de usuario" required>
-            <button id="registerButton">Registrar</button>
-            <div id="registrationResult"></div>
-        </section>
+    <div class="container">
+        <!-- Barra de navegación (opcional) -->
+        <nav class="navbar">
+            <h1>Casino Crypto</h1>
+            <ul>
+                <li><a href="#registro">Registrar</a></li>
+                <li><a href="#apuestas">Apuestas</a></li>
+                <li><a href="#consulta">Consultar</a></li>
+                <li><a href="#transferir">Transferir</a></li>
+            </ul>
+        </nav>
 
-        <!-- Apuestas -->
-        <section class="form-section">
-            <h2>Apostar</h2>
-            <input type="text" id="betUsername" placeholder="Tu nombre de usuario" required>
-            <input type="number" id="montoApuesta" placeholder="Monto en BTC" min="0.01" required>
-            <button id="placeBetButton">Realizar Apuesta</button>
-            <div id="apuestaResultado"></div>
-        </section>
+        <main class="content">
+            <!-- Registro de Usuario -->
+            <section class="form-section" id="registro">
+                <h2>Registrar Usuario</h2>
+                <input type="text" id="username" placeholder="Nombre de usuario" required>
+                <button id="registerButton">Regístrate</button>
+                <div id="registrationResult"></div>
+            </section>
 
-        <!-- Consultar Saldo -->
-        <section class="form-section">
-            <h2>Consultar Saldo</h2>
-            <input type="text" id="consultaUsuario" placeholder="Nombre de usuario" required>
-            <button id="checkBalanceButton">Consultar Balance</button>
-            <div id="resultado"></div>
-        </section>
+            <!-- Apuestas -->
+            <section class="form-section" id="apuestas">
+                <h2>Apostar</h2>
+                <input type="text" id="betUsername" placeholder="Tu nombre de usuario" required>
+                <input type="number" id="montoApuesta" placeholder="Monto en BTC" min="0.01" required>
+                <button id="placeBetButton">Realizar Apuesta</button>
+                <div id="apuestaResultado"></div>
+            </section>
 
-        <!-- Transferir BTC -->
-        <section class="form-section">
-            <h2>Transferir BTC</h2>
-            <input type="number" id="amountToTransfer" placeholder="Monto a transferir (BTC)" required>
-            <input type="text" id="transferAddress" placeholder="Dirección BTC" required>
-            <button id="transferButton">Transferir BTC</button>
-            <div id="transferResult"></div>
-        </section>
-    </main>
+            <!-- Consultar Saldo -->
+            <section class="form-section" id="consulta">
+                <h2>Consultar Saldo</h2>
+                <input type="text" id="consultaUsuario" placeholder="Nombre de usuario" required>
+                <button id="checkBalanceButton">Consultar Balance</button>
+                <div id="resultado"></div>
+            </section>
+
+            <!-- Transferir BTC -->
+            <section class="form-section" id="transferir">
+                <h2>Transferir BTC</h2>
+                <input type="number" id="amountToTransfer" placeholder="Monto a transferir (BTC)" required>
+                <input type="text" id="transferAddress" placeholder="Dirección BTC" required>
+                <button id="transferButton">Transferir BTC</button>
+                <div id="transferResult"></div>
+            </section>
+        </main>
+    </div>
 
     <script src="app.js"></script>
 </body>
