@@ -8,82 +8,135 @@
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #0f0f0f;
+    color: #fff;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     height: 100vh;
     margin: 0;
     padding: 20px;
+    background: url('casino-background.jpg') no-repeat center center/cover; /* Fondo tipo casino */
 }
 
 /* Contenedor principal */
-main {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.container {
     width: 100%;
-    max-width: 400px;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
-/* Secciones de formularios */
-.form-section {
-    margin-bottom: 20px;
-}
-
-/* Títulos de sección */
-h2 {
-    font-size: 1.3rem;
-    margin-bottom: 12px;
+/* Barra de navegación */
+.navbar {
     text-align: center;
+    margin-bottom: 30px;
+}
+
+.navbar h1 {
+    font-family: 'Georgia', serif;
+    color: #ffcc00; /* Dorado */
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Estilos para los formularios */
+.form-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ffcc00;
+    margin-bottom: 20px;
 }
 
 /* Inputs y botones */
 input[type="text"], input[type="number"] {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 2px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 2px solid #444;
     font-size: 1rem;
+    background-color: #222;
+    color: #fff;
 }
 
 input[type="text"]:focus, input[type="number"]:focus {
-    border-color: #d22b2b;
+    border-color: #ffcc00; /* Dorado */
+    outline: none;
 }
 
-/* Botones */
 button {
     width: 100%;
-    padding: 12px;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 10px;
     border: none;
-    background-color: #d22b2b;
-    color: white;
+    background-color: #ffcc00;
+    color: #222;
     font-size: 1.1rem;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #e94c3c;
+    background-color: #d22b2b;
+    transform: scale(1.05);
 }
 
-/* Resultado de la acción */
+/* Resultados de acción */
 #registrationResult, #resultado, #apuestaResultado, #transferResult {
-    margin-top: 15px;
-    padding: 12px;
-    border-radius: 5px;
-    background-color: #eee;
-    font-weight: bold;
+    margin-top: 20px;
+    padding: 10px;
     text-align: center;
+    font-weight: bold;
+    background-color: #333;
+    border-radius: 10px;
 }
 
-/* Sección de información adicional */
-.info-section {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 1rem;
-    color: #666;
+/* Animación para los resultados */
+#registrationResult, #resultado, #apuestaResultado, #transferResult {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Transición de Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
