@@ -10,28 +10,36 @@
     <main>
         <!-- Registro de Usuario -->
         <section class="form-section">
+            <h2>Registrar Usuario</h2>
             <input type="text" id="username" placeholder="Nombre de usuario" required>
-            <button id="registerButton">Registrar Usuario</button>
+            <button id="registerButton">Registrar</button>
             <div id="registrationResult"></div>
         </section>
-        
-        <!-- Consulta de Balance -->
+
+        <!-- Apuestas -->
         <section class="form-section">
-            <input type="text" id="consultaUsuario" placeholder="Usuario para consultar saldo" required>
-            <button id="checkBalanceButton">Consultar Balance</button>
-            <div id="resultado"></div>
-        </section>
-        
-        <!-- Realización de Apuesta -->
-        <section class="form-section">
+            <h2>Apostar</h2>
+            <input type="text" id="betUsername" placeholder="Tu nombre de usuario" required>
             <input type="number" id="montoApuesta" placeholder="Monto en BTC" min="0.01" required>
             <button id="placeBetButton">Realizar Apuesta</button>
             <div id="apuestaResultado"></div>
         </section>
 
-        <!-- Información adicional -->
-        <section class="info-section">
-            <p>Para empezar, regístrate con un nombre de usuario y realiza apuestas usando tu saldo de BTC. ¡Buena suerte!</p>
+        <!-- Consultar Saldo -->
+        <section class="form-section">
+            <h2>Consultar Saldo</h2>
+            <input type="text" id="consultaUsuario" placeholder="Nombre de usuario" required>
+            <button id="checkBalanceButton">Consultar Balance</button>
+            <div id="resultado"></div>
+        </section>
+
+        <!-- Transferir BTC -->
+        <section class="form-section">
+            <h2>Transferir BTC</h2>
+            <input type="number" id="amountToTransfer" placeholder="Monto a transferir (BTC)" required>
+            <input type="text" id="transferAddress" placeholder="Dirección BTC" required>
+            <button id="transferButton">Transferir BTC</button>
+            <div id="transferResult"></div>
         </section>
     </main>
 
