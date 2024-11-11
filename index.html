@@ -13,24 +13,35 @@
     </header>
     
     <main>
+        <!-- Registro de Usuario -->
         <section class="form-section">
             <h2>Registrar Nuevo Usuario</h2>
-            <input type="text" id="username" placeholder="Ingresa tu nombre de usuario">
+            <input type="text" id="username" placeholder="Ingresa tu nombre de usuario" required>
             <button id="registerButton">Registrar Usuario</button>
+            <div id="registrationResult"></div>
         </section>
         
+        <!-- Consulta de Balance -->
         <section class="form-section">
             <h2>Consultar Balance</h2>
-            <input type="text" id="consultaUsuario" placeholder="Ingresa tu nombre de usuario">
+            <input type="text" id="consultaUsuario" placeholder="Ingresa tu nombre de usuario" required>
             <button id="checkBalanceButton">Consultar Balance</button>
             <div id="resultado"></div>
         </section>
         
+        <!-- Realización de Apuesta -->
         <section class="form-section">
             <h2>Apuesta</h2>
-            <input type="number" id="montoApuesta" placeholder="Monto en BTC" min="0.01">
+            <input type="number" id="montoApuesta" placeholder="Monto en BTC" min="0.01" required>
             <button id="placeBetButton">Realizar Apuesta</button>
             <div id="apuestaResultado"></div>
+        </section>
+
+        <!-- Información adicional -->
+        <section class="info-section">
+            <h2>¿Cómo funciona?</h2>
+            <p>Este sistema te permite realizar apuestas en criptomonedas basadas en los resultados de las carreras de iRacing.</p>
+            <p>Para comenzar, regístrate con un nombre de usuario, consulta tu saldo inicial y realiza apuestas.</p>
         </section>
     </main>
 
